@@ -1,0 +1,131 @@
+body{
+    background-color: rgb(114, 125, 167);
+    overflow-x: hidden;
+    height: 100%;
+}
+fieldset{
+    border-color:rgb(214, 214, 214);
+    border:groove;
+}
+h1#titulo{
+    font-size: 25pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 2px 2px 2px rgb(58, 57, 57);
+}
+div#rodape{
+    margin: auto auto 2px auto;
+    border: 3px;
+    border-color: rgb(1, 1, 77);
+    box-shadow: 2px 2px 5px 1px  #00027e93;
+    width: 90%;
+    height: 5vh;
+    border-radius: 25px;
+    padding: 15px auto 5px auto;
+    background-color: darkgrey;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+h3#copy{
+    margin:25px auto 5px auto;
+}
+footer{
+    
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    -moz-box-align: center;
+}
+div#header{
+    margin: 2px auto 2px auto;
+    border: 3px;
+    border-color: rgb(1, 1, 77);
+    box-shadow: 2px 2px 5px 1px  #00027e93;
+    width: 90%;
+    height: 20vh;
+    border-radius: 25px;
+    padding: 1px;
+    background-color: darkgrey  ;
+   
+}
+h2#resposta{
+    color:rgb(143, 2, 2);
+    margin: 0px;
+}
+div#logo{
+    margin: 0px auto 5px auto;
+    height: 20vh; 
+    float: left;
+    
+}
+div#titulo{
+ align-items: center;
+ vertical-align: middle;
+ text-align: center;
+ margin:20pt 5px 5px 5px;
+ }
+ 
+img#logo{
+ height: 100%;
+ margin: auto;
+ padding: 0px;
+ 
+}
+input#login{
+    border-radius: 15px;
+    height: 20px;
+    width: 70%;
+    font-weight: bold;
+    border:none;
+    box-shadow: 2px 2px 5px 1px #1a1919;
+    }
+    input#senha{
+        border-radius: 15px;
+        height: 20px;
+        width: 70%;
+        font-weight: bold;
+        border:none;
+        box-shadow: 2px 2px 5px 1px #1a1919;
+        }
+        input#entrar{
+            width: 65px;
+            height: 25px;
+            border-radius: 15px;
+            font-weight: bold;
+            border:none;
+            box-shadow: 2px 2px 5px 1px #1a1919;
+            margin:2px 5px 2px 5px;
+            }
+            input#limpar{
+                width: 65px;
+                height: 25px;
+                border-radius: 15px;
+                font-weight: bold;
+                border:none;
+                box-shadow: 2px 2px 5px 1px #1a1919;
+                margin:2px 5px 2px 5px;
+                }
+section#corpo_login{
+    margin: 25px auto 25px auto;
+    width: 50vw;
+    height: 60vh;
+    background-color: darkgrey  ;
+    border-radius: 25px;
+    border-color: rgb(1, 1, 77);
+    box-shadow: 2px 2px 5px 1px  #00027e93;
+    padding: 15px;
+}
+img#foto_hora{
+    margin: auto;
+    align-self: center;
+}
+div#campos_login{
+    margin: auto;
+    background-color: rgb(187, 186, 186);
+    padding: 15px;
+    border-radius: 25px;
+    width: 95%;
+    height: 90%;
+    box-shadow: 2px 2px 5px 1px #1a1919;
+    text-align: center;
+    }

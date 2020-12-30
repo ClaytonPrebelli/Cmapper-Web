@@ -1,0 +1,264 @@
+body{
+    background-color: rgb(114, 125, 167);
+    overflow-x: hidden;
+    height: 100%;
+}
+div#add_user{
+    width: 20%;
+    height: 200px;
+    padding: 0px;
+    vertical-align: middle;
+    align-content: center   ;
+    float: left;
+    text-align: center;
+    margin: 85px 25px 35px 25px;
+}
+div#change_pass{
+    /*border-color:rgb(214, 214, 214);
+    border:groove;*/
+    width: 20%;
+    height: 200px;
+    padding: 0px;
+    /*box-shadow: 2px 2px 2px #50515393;
+    border-radius: 25px;
+    background-color: rgb(207, 206, 206) ;*/
+    vertical-align: middle;
+    align-content: center   ;
+    float: left;
+    text-align: center;
+    margin: 85px 25px 35px 25px;
+}
+div#remove_user{
+    /*border-color:rgb(214, 214, 214);
+    border:groove;*/
+    width: 20%;
+    height: 200px;
+    padding: 0px;
+    /*box-shadow: 2px 2px 2px #50515393;
+    border-radius: 25px;
+    background-color: rgb(207, 206, 206) ;*/
+    vertical-align: middle;
+    align-content: center   ;
+    float: left;
+    text-align: center;
+    margin: 85px 25px 35px 25px;
+}
+div#list_user{
+    /*border-color:rgb(214, 214, 214);
+    border:groove;*/
+    width: 20%;
+    height: 200px;
+    padding: 0px;
+    /*box-shadow: 2px 2px 2px #50515393;
+    border-radius: 25px;
+    background-color: rgb(207, 206, 206) ;*/
+    vertical-align: middle;
+    align-content: center   ;
+    float: left;
+    text-align: center;
+    margin: 85px 25px 35px 25px;
+}
+.iconusers{
+    display: block;
+    margin: 2px auto 2px auto;
+}
+div#add{
+    margin: 0px auto 2px auto;
+    border:solid;
+    padding: 22px;
+    display: block;
+}
+div#conteudo_total{
+    width: 90%;
+    margin: 10px auto 0px auto;
+    border: 3px;
+    border-color: rgb(1, 1, 77);
+    box-shadow: 2px 2px 5px 1px  #00027e93;
+    height: 68vh;
+    border-radius: 25px;
+    padding: 1px;
+    background-color: darkgrey  ;   
+}
+div#conteudo{
+    margin:15px 15px 15px 15px;
+}
+div#rodape2{
+    margin: 0px auto 2px auto;
+    border: 3px;
+    border-color: rgb(1, 1, 77);
+    box-shadow: 2px 2px 5px 1px  #00027e93;
+    width: 90%;
+    height: 5vh;
+    border-radius: 25px;
+    padding: 0px auto 5px auto;
+    background-color: darkgrey;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+h3#copy2{
+    margin:25px auto 5px auto;
+}
+div#ropade{
+    
+    bottom: 0;
+    position: absolute;
+    width: 90%;
+    
+}
+div#header{
+    margin: 2px auto 2px auto;
+    border: 3px;
+    border-color: rgb(1, 1, 77);
+    box-shadow: 2px 2px 5px 1px  #00027e93;
+    width: 90%;
+    height: 20vh;
+    border-radius: 25px;
+    background-color: darkgrey  ;
+   
+}
+h1#titulo{
+    font-size: 25pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 2px 2px 2px rgb(58, 57, 57);
+}
+div#logout{
+    margin: 55px 0px 5px 65px;
+    
+    float: left;
+    }
+div#cp{
+    margin: 8px 0px 5px 0px;
+    width: 10%;
+    float: right;
+    right: 0;
+    }
+img#cp{
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+    
+   }
+div#logo{
+    margin: 0px 0px 5px auto;
+    height: 20vh; 
+    width: 20%;
+    float: left;
+    
+}
+div#titulo{
+ align-items: center;
+ vertical-align: middle;
+ text-align: center;
+ margin:5px 0px 0px 0px;
+ width: 60%;
+ float:left;
+ }
+ 
+img#logo{
+ height: 100%;
+ margin: auto;
+ padding: 0px;
+ 
+}
+/*h1.titulo_usuarios{
+    /*text-align: left;
+}*/
+p.labels_cadastro{
+    font-weight:bold;
+    text-align: left;
+}
+p.escrito_cadastrado{
+    font-weight:bold;
+    text-align: center;
+    height: 22px;
+    
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px #1a1919;
+    border-radius: 15px;
+    
+}
+h1#titulo_cadastrar{
+    text-align: center;
+}
+h2#titulo_cadastrar{
+    text-align: center;
+    margin:0px;
+}
+    div#campos{
+       /* border:solid;*/
+        width: 40%;
+        height:80%;
+        padding: 0px;
+        vertical-align: middle;
+        align-content: center   ;
+       /* float: left;*/
+        text-align: center;
+        margin: auto;
+    }
+    div.cadastrado{
+        display: none;
+        box-shadow: 2px 2px 5px 1px  #00027e93;
+        border-radius: 15px;
+        background-color: rgb(216, 214, 214);
+         width: 30%;
+         height:80%;
+         padding: 5px 10px 5px 10px;
+         vertical-align: middle;
+         align-content: center   ;
+         float: right;
+         text-align: center;
+         margin: 07px 150px auto 25px;
+     }
+    input.formulario_cadastro{
+        border-radius: 15px;
+        height: 22px;
+        width: 80%;
+        font-weight: bold;
+        border:none;
+        float: right;
+        box-shadow: 2px 2px 5px 1px #1a1919;
+        padding-left: 10px;
+        }
+        select.lista_banco{
+        border-radius: 15px;
+        height: 22px;
+        width: 82%;
+        font-weight: bold;
+        border:none;
+        box-shadow: 2px 2px 5px 1px #1a1919;
+        float:right;
+        padding-left: 10px;
+        }
+       input#enviar_remove{
+          
+            background: url(images/pesquisa.png) no-repeat;
+            width: 100px;
+            height: 100px;
+            border:none;
+           overflow: hidden;
+            cursor: pointer; /* vai por o cursor como forma de mão ao passar por cima do botão */
+           cursor: hand; /* para o IE 5.x */
+        }
+        input#enviar{
+          
+            background: url(images/adduser.png) no-repeat;
+            width: 100px;
+            height: 100px;
+            border:none;
+           overflow: hidden;
+            cursor: pointer; /* vai por o cursor como forma de mão ao passar por cima do botão */
+           cursor: hand; /* para o IE 5.x */
+        }
+        
+        input#limpar{
+          
+            background: url(images/limpar.png) no-repeat;
+            width: 100px;
+            height: 100px;
+            border:none;
+           overflow: hidden;
+            cursor: pointer; /* vai por o cursor como forma de mão ao passar por cima do botão */
+           cursor: hand; /* para o IE 5.x */
+        }
+ 
