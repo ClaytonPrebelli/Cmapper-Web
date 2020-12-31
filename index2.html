@@ -20,7 +20,7 @@
     <section id="header">
     <div id="header">
         <div id="logo">
-           <a href="index2.php"> <img src="images/logo.png" alt="Logo" id="logo"></a>
+           <a href="index2.html"> <img src="images/logo.png" alt="Logo" id="logo"></a>
         </div>
         <div id="titulo"><h1 id="titulo">Cmapper - Cadastro de Pacientes COVID-19</h1>
         </div><div id="logout"><a href="index.php"><img src="images/logout.png" alt="logout"></a></div><div id="cp"><a href="valida.php"><img src="images/cp.png" alt="CP" id="cp"></a></div></section>
