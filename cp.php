@@ -28,7 +28,7 @@
             <div id="conteudo" class="conteudo"> <div id="add_user"><h2>Adicionar Usuário</center></h2><a href="adduser.php"><img src="images/adduser.png" alt="Add User" class="icones_user"></div></a>
     <div id="remove_user"><h2>Deletar Usuário</center></h2><a href="removeuser.php"><img src="images/removeuser.png" alt="Remove User" class="icones_user"></a></div>
     <div id="list_user"><h2>Listar Usuário</center></h2><a href="listuser.php"><img src="images/listuser.png" alt="Listar User" class="icones_user"></a></div>
-    <div id="change_pass"><h2>Alterar Senha</center></h2><img src="images/changepass.png" alt="Alterar Senha" class="icones_user"></div></div>
+    <div id="change_pass"><h2>Alterar Senha</center></h2><a href="changepass.php"><img src="images/changepass.png" alt="Alterar Senha" class="icones_user"></a></div></div>
         </div>
     <div id="rodape"><div id="rodape2"> <h3 id="copy">Desenvolvido por <a id="link_rodape2" href="mailto:clayton@prebelli.online">Clayton Prebelli</a> &copy</h3></div>
    

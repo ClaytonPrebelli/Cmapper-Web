@@ -198,12 +198,12 @@ h2#titulo_cadastrar{
      }
      div#campos_tabela{
         /* border:solid;*/
-         width: 60%;
+         width: 65%;
          height:80%;
          padding: 5px auto 5px auto;
          vertical-align: middle;
          align-content: center   ;
-        /* float: left;*/
+        
          text-align: center;
          margin: 15px auto 5px auto;
      }
@@ -212,19 +212,19 @@ h2#titulo_cadastrar{
         box-shadow: 2px 2px 5px 1px  #00027e93;
         border-radius: 15px;
         background-color: rgb(216, 214, 214);
-         width: 30%;
+         width: 40%;
          height:80%;
          padding: 5px 10px 5px 10px;
          vertical-align: middle;
          align-content: center   ;
          float: right;
          text-align: center;
-         margin: 07px 150px auto 25px;
+         margin: 07px 70px auto 25px;
      }
     input.formulario_cadastro{
         border-radius: 15px;
         height: 22px;
-        width: 80%;
+        width: 75%;
         font-weight: bold;
         border:none;
         float: right;
@@ -234,7 +234,7 @@ h2#titulo_cadastrar{
         select.lista_banco{
         border-radius: 15px;
         height: 22px;
-        width: 82%;
+        width: 78%;
         font-weight: bold;
         border:none;
         box-shadow: 2px 2px 5px 1px #1a1919;

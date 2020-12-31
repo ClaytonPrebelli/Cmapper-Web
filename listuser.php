@@ -44,10 +44,7 @@
                 <a href="cp.php"><img src="images/voltar.png" alt="Voltar"></a>
         </div>
         
-        <div class="cadastrado" id="cadastrado">                         
-
-          ?>
-        </div></div>
+        </div>
         </div>
     <div id="rodape"><div id="rodape2"> <h3 id="copy">Desenvolvido por <a id="link_rodape2" href="mailto:clayton@prebelli.online">Clayton Prebelli</a> &copy</h3></div>
    

@@ -27,13 +27,14 @@
         </div><div id="logout"><a href="index.php"><img src="images/logout.png" alt="logout"></a></div><div id="cp"><a href="valida.php"><img src="images/cp.png" alt="CP" id="cp"></a></div></section>
         <div id="conteudo_total" class="conteudo">
             <div id="conteudo" class="conteudo">
-    <h1 id="titulo_cadastrar" class="titulo_usuarios">Remover Usuário</h1><hr>
+    <h1 id="titulo_cadastrar" class="titulo_usuarios">Alterar Senha</h1><hr>
     <div class="campos_cadastro" id="campos">
-        <p class="labels_cadastro">Escolha o critério para pesquisar o usuário.</p>
+        <p class="labels_cadastro">Escolha o critério para pesquisar o usuário e a nova senha.</p>
     <form method="post"action="?cadastrado=true">
         <p class="labels_cadastro">Nome: <input type="text" name="nome" id="nome" class="formulario_cadastro"></p>
         <p class="labels_cadastro">Email: <input type="email" name="email" id="email" class="formulario_cadastro"></p>
         <p class="labels_cadastro">Usuário: <input type="text" name="usuario" id="usuario" class="formulario_cadastro"></p>
+</br><p class="labels_cadastro">Nova Senha: <input type="password" name="np" id="np" class="formulario_cadastro"></p>
         <input  type="submit" value="" id="enviar_remove" >
         
         <input type="reset" value="" id="limpar">
@@ -44,13 +45,14 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $usuario = $_POST['usuario'];
+        $senha = md5($_POST['np']);
         require 'conectar.php';
         $sql = "select usuarios.nome, usuarios.email, permissoes.permission_descricao, usuarios.usuario from usuarios join permissoes on usuarios.permissao = permissoes.idpermission where usuarios.nome='$nome' or usuarios.email='$email' or usuarios.usuario='$usuario';";
         $roda=mysql_query($sql);
              while($res=mysql_fetch_array($roda)){
                  $vnome=$res['nome'];
                  $vemail=$res['email'];
-                 $vpermissao= strtoupper($res['permission_descricao']);
+                 $vpermissao= ucfirst($res['permission_descricao']);
                  $vuser=$res['usuario'];
              }
                 ?>
@@ -58,7 +60,7 @@
             
           <?php
           $cadastrado = $_GET['cadastrado'];
-          $removido=$_GET['removido'];
+          $alterado=$_GET['alterado'];
           if ($cadastrado==true){
                 if (mysql_num_rows($roda)<=0){
                     echo "<script>swal('Usuário não encontrado')</script>";
@@ -111,61 +113,12 @@
           background-color: white;
           box-shadow: 2px 2px 5px 1px #1a1919;
           border-radius: 15px;">'.$vuser.'</span></p>';
-          echo '<p class="labels_cadastro">Tem certeza que deseja remover o usuário?</p>';
-          echo'<a href="remover.php?vnome='.$vnome.'&vemail='.$vemail.'&vpermissao='.$vpermissao.'&vuser='.$vuser.'"><img src="images/aceitar.png" alt="Aceitar"></a>';
-          echo'<a href="removeuser.php?vnome='.$vnome.'&vemail='.$vemail.'&vpermissao='.$vpermissao.'&vuser='.$vuser.'"><img src="images/cancelar.png" alt="Cancelar"></a>';
+          echo '<p class="labels_cadastro">Tem certeza que deseja alterar a senha deste usuário?</p>';
+          echo'<a href="alterar.php?vnome='.$vnome.'&vemail='.$vemail.'&vpermissao='.$vpermissao.'&vuser='.$vuser.'&senha='.$senha.'"><img src="images/aceitar.png" alt="Aceitar"></a>';
+          echo'<a href="removeuser.php?vnome='.$vnome.'&vemail='.$vemail.'&vpermissao='.$vpermissao.'&vuser='.$vuser.'&senha='.$senha.'"><img src="images/cancelar.png" alt="Cancelar"></a>';
          }
-        } if($removido==true){
-            $vuser = $_GET['vuser'];
-            $vnome = $_GET['vnome'];
-            $vpermissao = $_GET['vpermissao'];
-            $vemail = $_GET['vemail'];
-                echo '<script>
-                var mostra = document.getElementById("cadastrado")
-                mostra.style.display="block"
-                var desliza = document.getElementById("campos")
-                desliza.style.float="left"
-                desliza.style.margin="auto 25px auto 25px"
-            </script>';
-          echo '<h2 id="titulo_cadastrado" class="titulo_usuarios">Usuário Removido</h2>';
-          echo '<p class="labels_cadastro">Nome: <span style="font-weight:bold;
-          text-align: left;
-          height: 22px;
-          width: 250px;
-          padding-left:10px;
-          padding-right:10px;
-          background-color: white;
-          box-shadow: 2px 2px 5px 1px #1a1919;
-          border-radius: 15px;">'.$vnome.'</span></p>';
-          echo '<p class="labels_cadastro">Email: <span style="font-weight:bold;
-          text-align: left;
-          height: 22px;
-          width: 150px;
-          padding-left:10px;
-          padding-right:10px;
-          background-color: white;
-          box-shadow: 2px 2px 5px 1px #1a1919;
-          border-radius: 15px;">'.$vemail.'</span></p>';
-          echo '<p class="labels_cadastro">Permissão: <span style="font-weight:bold;
-          text-align: left;
-          height: 22px;
-          width: 150px;
-          padding-left:10px;
-          padding-right:10px;
-          background-color: white;
-          box-shadow: 2px 2px 5px 1px #1a1919;
-          border-radius: 15px;">'.$vpermissao.'</span></p>';
-          echo '<p class="labels_cadastro">Usuário: <span style="font-weight:bold;
-          text-align: left;
-          height: 22px;
-          width: 80%;
-          padding-left:10px;
-          padding-right:10px;
-          background-color: white;
-          box-shadow: 2px 2px 5px 1px #1a1919;
-          border-radius: 15px;">'.$vuser.'</span></p>';
-          ;
-          echo '<p class="labels_cadastro">O usuário não terá mais acesso ao sistema</p>'; 
+        } if($alterado==true){
+            echo '<script>swal("Senha alterada com sucesso")</script>'; 
          }
          
 

@@ -39,7 +39,7 @@
             require 'conectar.php';
             $query = mysql_query("select idpermission,permission_descricao from permissoes");
             while($perm = mysql_fetch_array($query)) { ?>
-                <option value="<?php echo $perm['idpermission']?>" class="lista_banco"><?php echo strtoupper($perm['permission_descricao']) ?></option>
+                <option value="<?php echo $perm['idpermission']?>" class="lista_banco"><?php echo ucfirst($perm['permission_descricao']) ?></option>
                 <?php } ?>
                
             </select>
@@ -63,10 +63,10 @@
           $desc_perm;
           
           if($permissao==1){
-                  $desc_perm='ADMINISTRADOR';}else if($permissao==2){
-                  $desc_perm='USUÁRIO';
+                  $desc_perm='Administrador';}else if($permissao==2){
+                  $desc_perm='Usuário';
               }else{
-                  $desc_perm='NÃO INFORMADO';
+                  $desc_perm='Não Informado';
               }
           $usuario = $_GET['usuario'];
           $senha = $_GET['senha'];
@@ -77,7 +77,7 @@
                 mostra.style.display="block"
                 var desliza = document.getElementById("campos")
                 desliza.style.float="left"
-                desliza.style.margin="auto 0px auto 150px"
+                desliza.style.margin="auto 0px auto 70px"
             </script>';
           echo '<h2 id="titulo_cadastrado" class="titulo_usuarios">Usuário Cadastrado com Sucesso!</h2>';
           echo '<p class="labels_cadastro">Nome: <span style="font-weight:bold;
@@ -86,6 +86,7 @@
           width: 250px;
           padding-left:10px;
           padding-right:10px;
+          padding-bottom:2px;
           background-color: white;
           box-shadow: 2px 2px 5px 1px #1a1919;
           border-radius: 15px;">'.$nome.'</span></p>';
@@ -95,6 +96,7 @@
           width: 150px;
           padding-left:10px;
           padding-right:10px;
+          padding-bottom:2px;
           background-color: white;
           box-shadow: 2px 2px 5px 1px #1a1919;
           border-radius: 15px;">'.$email.'</span></p>';
@@ -104,6 +106,7 @@
           width: 150px;
           padding-left:10px;
           padding-right:10px;
+          padding-bottom:2px;
           background-color: white;
           box-shadow: 2px 2px 5px 1px #1a1919;
           border-radius: 15px;">'.$desc_perm.'</span></p>';
@@ -113,6 +116,7 @@
           width: 150px;
           padding-left:10px;
           padding-right:10px;
+          padding-bottom:2px;
           background-color: white;
           box-shadow: 2px 2px 5px 1px #1a1919;
           border-radius: 15px;">'.$usuario.'</span></p>';}else if ($cadastrado==2){          
