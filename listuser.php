@@ -25,7 +25,7 @@
         </div>
         <div id="titulo"><h1 id="titulo">Cmapper - Cadastro de Pacientes COVID-19</h1>
         </div><div id="logout"><a href="index.php"><img src="images/logout.png" alt="logout"></a></div><div id="cp"><a href="valida.php"><img src="images/cp.png" alt="CP" id="cp"></a></div></section>
-        <div id="conteudo_total" class="conteudo">
+        <div id="conteudo_total_list" class="conteudo_list">
             <div id="conteudo" class="conteudo">
     <h1 id="titulo_cadastrar" class="titulo_usuarios">Listar Usuário</h1><hr>
     <div class="campos_tabela" id="campos_tabela">
@@ -46,7 +46,7 @@
         
         </div>
         </div>
-    <div id="rodape"><div id="rodape2"> <h3 id="copy">Desenvolvido por <a id="link_rodape2" href="mailto:clayton@prebelli.online">Clayton Prebelli</a> &copy</h3></div>
+    <div id="rodape"><div id="rodape2"> <h3 id="copy">Desenvolvido por <a id="link_rodape2" href="mailto:clayton@prebelli.online">Clayton Prebelli</a> &copy</h3></div></div>
    
     
     

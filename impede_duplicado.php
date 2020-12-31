@@ -17,7 +17,7 @@ $sql = "insert into usuarios values(default,'$nome','$email',$permissao,'$usuari
 $verifica = mysql_query("select * from usuarios where nome = '$nome' or email = '$email' or usuario = '$usuario'");
 if (mysql_num_rows($verifica)<=0){
         mysql_query($sql);
-        header("Location:adduser.php?cadastrado=1&nome=$nome&email=$email&permissao=$permissao.usuario=$usuario");}else{
+        header("Location:adduser.php?cadastrado=1&nome=$nome&email=$email&permissao=$permissao&usuario=$usuario");}else{
             header('Location:adduser.php?cadastrado=2');
         }
 

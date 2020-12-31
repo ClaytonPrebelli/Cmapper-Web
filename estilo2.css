@@ -79,31 +79,44 @@ div#conteudo_total{
     padding: 1px;
     background-color: darkgrey  ;   
 }
+div#conteudo_total_list{
+    width: 90%;
+    margin: 10px auto 0px auto;
+    border: 3px;
+    border-color: rgb(1, 1, 77);
+    box-shadow: 2px 2px 5px 1px  #00027e93;
+    min-height: 68vh;
+    border-radius: 25px;
+    padding: 1px;
+    background-color: darkgrey  ; 
+    overflow:hidden;  
+}
 div#conteudo{
     margin:15px 15px 15px 15px;
 }
 div#rodape2{
-    margin: 0px auto 2px auto;
+    margin: 0px auto 0px auto;
     border: 3px;
     border-color: rgb(1, 1, 77);
     box-shadow: 2px 2px 5px 1px  #00027e93;
-    width: 90%;
-    height: 5vh;
+    width: 190vh;
+    height: 35px;
     border-radius: 25px;
-    padding: 0px auto 5px auto;
+    padding: 55px 5px 0px auto;
     background-color: darkgrey;
     text-align: center;
     font-weight: bold;
     vertical-align: middle;
+   
 }
 h3#copy2{
-    margin:25px auto 5px auto;
+    margin:40px auto 5px auto;
 }
 div#ropade{
-    
-    bottom: 0;
-    position: absolute;
-    width: 90%;
+        margin-bottom: 0px;
+        position:absolute;
+        bottom:0px;
+        width:90%;
     
 }
 div#header{
@@ -197,13 +210,13 @@ h2#titulo_cadastrar{
          margin: auto;
      }
      div#campos_tabela{
-        /* border:solid;*/
-         width: 65%;
-         height:80%;
+        /*border:solid;*/
+         width: 100%;
+         height:100%;
          padding: 5px auto 5px auto;
          vertical-align: middle;
          align-content: center   ;
-        
+         box-sizing: content-box;
          text-align: center;
          margin: 15px auto 5px auto;
      }
