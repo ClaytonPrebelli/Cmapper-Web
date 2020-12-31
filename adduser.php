@@ -12,6 +12,7 @@
 <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>  
 <link rel="stylesheet" href="estilo2.css">
 </head>
@@ -71,7 +72,10 @@
             
           <?php
           $cadastrado = $_GET['cadastrado'];
+          $verifica = mysql_query("select * from usuarios where nome = '$nome' or email = '$email' or usuario = '$usuario'");
+          
           if ($cadastrado==true){
+            if (mysql_num_rows($verifica)<=0){
             echo '<script>
                 var mostra = document.getElementById("cadastrado")
                 mostra.style.display="block"
@@ -115,7 +119,9 @@
           padding-right:10px;
           background-color: white;
           box-shadow: 2px 2px 5px 1px #1a1919;
-          border-radius: 15px;">'.$usuario.'</span></p>';}
+          border-radius: 15px;">'.$usuario.'</span></p>';}else{
+            echo "<script>swal('Usuário já existente!')</script>";
+          }}
 
           ?>
         </div></div>
