@@ -29,7 +29,7 @@
             <div id="conteudo" class="conteudo">
     <h1 id="titulo_cadastrar" class="titulo_usuarios">Cadastrar Usuário</h1><hr>
     <div class="campos_cadastro" id="campos">
-    <form method="post"action="?cadastrado=true">
+    <form method="post"action="impede_duplicado.php">
         <p class="labels_cadastro">Nome: <input type="text" name="nome" id="nome" class="formulario_cadastro"></p>
         <p class="labels_cadastro">Email: <input type="email" name="email" id="email" class="formulario_cadastro"></p>
         <p class="labels_cadastro">Permissão: 
@@ -52,31 +52,27 @@
         </form>
         </div>
         <?php
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $permissao = $_POST['permissao'];
-        $desc_perm;
-        if($permissao==1){
-                $desc_perm='ADMINISTRADOR';}else if($permissao==2){
-                $desc_perm='USUÁRIO';
-            }else{
-                $desc_perm='NÃO INFORMADO';
-            }
-        $usuario = $_POST['usuario'];
-        $senha = $_POST['senha'];
-        require 'conectar.php';
-        $sql = "insert into usuarios values(default,'$nome','$email',$permissao,'$usuario',".md5."('$senha'))";
-                mysql_query($sql);
+        
               ?>
         <div class="cadastrado" id="cadastrado">
             
           <?php
-          $cadastrado = $_GET['cadastrado'];
-          $verifica = mysql_query("select * from usuarios where nome = '$nome' or email = '$email' or usuario = '$usuario'");
+          $nome = $_GET['nome'];
+          $email = $_GET['email'];
+          $permissao = $_GET['permissao'];
+          $desc_perm;
           
-          if ($cadastrado==true){
-            if (mysql_num_rows($verifica)<=0){
-            echo '<script>
+          if($permissao==1){
+                  $desc_perm='ADMINISTRADOR';}else if($permissao==2){
+                  $desc_perm='USUÁRIO';
+              }else{
+                  $desc_perm='NÃO INFORMADO';
+              }
+          $usuario = $_GET['usuario'];
+          $senha = $_GET['senha'];
+          $cadastrado = $_GET['cadastrado'];
+            if ($cadastrado==1){
+                echo '<script>
                 var mostra = document.getElementById("cadastrado")
                 mostra.style.display="block"
                 var desliza = document.getElementById("campos")
@@ -119,9 +115,9 @@
           padding-right:10px;
           background-color: white;
           box-shadow: 2px 2px 5px 1px #1a1919;
-          border-radius: 15px;">'.$usuario.'</span></p>';}else{
-            echo "<script>swal('Usuário já existente!')</script>";
-          }}
+          border-radius: 15px;">'.$usuario.'</span></p>';}else if ($cadastrado==2){          
+             echo "<script>swal('Usuário já existente!')</script>";
+          }
 
           ?>
         </div></div>
