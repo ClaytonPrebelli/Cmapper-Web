@@ -6,20 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="teste.css">
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 <body>
-<table id="tabela">
-<tr>
-    <th class="head">Nome</th><th class="head">Email</th><th class="head">Permissao</th><th class="head">Usuario</th>    
-</tr>
-<?php
-require('conectar.php');
-$sql = mysql_query("select usuarios.nome,usuarios.email,permissoes.permission_descricao,usuarios.usuario from usuarios join permissoes on usuarios.permissao=permissoes.idpermission");
-
-while($acumula=mysql_fetch_array($sql)){
-    echo "<td class='corpo'>".$acumula['nome']."</td><td class='corpo'>".$acumula['email']."</td><td class='corpo'>".ucfirst($acumula['permission_descricao'])."</td><td class='corpo'>".$acumula['usuario']."</td class='corpo'></tr> ";
-}
-?> 
-</table>
+<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="pt_BR" data-type="vertical" data-theme="dark" data-vanity="clayton-prebelli"><a class="LI-simple-link" href='https://br.linkedin.com/in/clayton-prebelli?trk=profile-badge'>Clayton Prebelli Pires</a></div>
 </body>
 </html>
