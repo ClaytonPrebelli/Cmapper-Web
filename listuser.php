@@ -12,7 +12,8 @@
 <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>  
 <link rel="stylesheet" href="estilo2.css">
 </head>
 <body id="fundo_site2">
@@ -25,10 +26,28 @@
         <div id="titulo"><h1 id="titulo">Cmapper - Cadastro de Pacientes COVID-19</h1>
         </div><div id="logout"><a href="index.php"><img src="images/logout.png" alt="logout"></a></div><div id="cp"><a href="valida.php"><img src="images/cp.png" alt="CP" id="cp"></a></div></section>
         <div id="conteudo_total" class="conteudo">
-            <div id="conteudo" class="conteudo"> <div id="add_user"><h2>Adicionar Usuário</center></h2><a href="adduser.php"><img src="images/adduser.png" alt="Add User" class="icones_user"></div></a>
-    <div id="remove_user"><h2>Deletar Usuário</center></h2><a href="removeuser.php"><img src="images/removeuser.png" alt="Remove User" class="icones_user"></a></div>
-    <div id="list_user"><h2>Listar Usuário</center></h2><a href="listuser.php"><img src="images/listuser.png" alt="Listar User" class="icones_user"></a></div>
-    <div id="change_pass"><h2>Alterar Senha</center></h2><img src="images/changepass.png" alt="Alterar Senha" class="icones_user"></div></div>
+            <div id="conteudo" class="conteudo">
+    <h1 id="titulo_cadastrar" class="titulo_usuarios">Listar Usuário</h1><hr>
+    <div class="campos_tabela" id="campos_tabela">
+    <table id="tabela">
+<tr>
+    <th class="head">Nome</th><th class="head">Email</th><th class="head">Permissao</th><th class="head">Usuario</th>    
+</tr>
+    <?php
+        require('conectar.php');
+        $sql = mysql_query("select usuarios.nome,usuarios.email,permissoes.permission_descricao,usuarios.usuario from usuarios join permissoes on usuarios.permissao=permissoes.idpermission");
+        
+        while($acumula=mysql_fetch_array($sql)){
+            echo "<td class='corpo'>".$acumula['nome']."</td><td class='corpo'>".$acumula['email']."</td><td class='corpo'>".ucfirst($acumula['permission_descricao'])."</td><td class='corpo'>".$acumula['usuario']."</td class='corpo'></tr> ";
+        }
+                ?></table>
+                <a href="cp.php"><img src="images/voltar.png" alt="Voltar"></a>
+        </div>
+        
+        <div class="cadastrado" id="cadastrado">                         
+
+          ?>
+        </div></div>
         </div>
     <div id="rodape"><div id="rodape2"> <h3 id="copy">Desenvolvido por <a id="link_rodape2" href="mailto:clayton@prebelli.online">Clayton Prebelli</a> &copy</h3></div>
    
