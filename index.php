@@ -52,7 +52,7 @@
                             die();
                           }else{
                             setcookie("login",$login);
-                            header("Location:index2.php?login=$login");
+                            header("Location:index2.html");
                           }
                       }
     ?>

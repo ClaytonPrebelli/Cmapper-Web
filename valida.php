@@ -7,6 +7,6 @@
     if (mysql_num_rows($verifica)<=0){
         header("Location: erro_perm.html"); 
         die();}else{
-            header("Location:cp.php");
+            header("Location:cp.html");
         }
     ?>
