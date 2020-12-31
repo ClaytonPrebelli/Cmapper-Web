@@ -186,27 +186,16 @@ h2#titulo_cadastrar{
     margin:0px;
 }
     div#campos{
-        /* border:solid;*/
-         width: 40%;
-         height:80%;
-         padding: 0px;
-         vertical-align: middle;
-         align-content: center   ;
-        /* float: left;*/
-         text-align: center;
-         margin: auto;
-     }
-     div#campos_tabela{
-        /* border:solid;*/
-         width: 60%;
-         height:80%;
-         padding: 5px auto 5px auto;
-         vertical-align: middle;
-         align-content: center   ;
-        /* float: left;*/
-         text-align: center;
-         margin: 15px auto 5px auto;
-     }
+       /* border:solid;*/
+        width: 40%;
+        height:80%;
+        padding: 0px;
+        vertical-align: middle;
+        align-content: center   ;
+       /* float: left;*/
+        text-align: center;
+        margin: auto;
+    }
     div.cadastrado{
         display: none;
         box-shadow: 2px 2px 5px 1px  #00027e93;
@@ -261,8 +250,7 @@ h2#titulo_cadastrar{
             cursor: pointer; /* vai por o cursor como forma de mão ao passar por cima do botão */
            cursor: hand; /* para o IE 5.x */
         }
-        tr:nth-child(even) {background: #d9e1f2}
-tr:nth-child(odd) {background:#f8f7f7}
+        
         input#limpar{
           
             background: url(images/limpar.png) no-repeat;
@@ -273,30 +261,4 @@ tr:nth-child(odd) {background:#f8f7f7}
             cursor: pointer; /* vai por o cursor como forma de mão ao passar por cima do botão */
            cursor: hand; /* para o IE 5.x */
         }
-        #tabela{
-            border-collapse: collapse;
-            text-align: center;
-            padding: 5px;
-            font-weight: bold;
-            border: 1px solid black;
-            box-shadow: 2px 2px 5px 1px  #00027e93;
-            width: 100%;
-            margin: 15px auto 15px auto;
-            
-        }
-        th.head{
-            background: #4472c4;
-            border-left: 1px solid black;
-            font-size: 15pt;
-            color:white;
-            }
-        td.corpo {
-            border-left: 1px solid black;
-            padding: 3px 25px 3px 25px;
-            
-          }
-        #tabela tr{
-            border: 1px dashed rgb(26, 26, 26);
-            padding: 3px 5px 3px 5px;
-           }
  
