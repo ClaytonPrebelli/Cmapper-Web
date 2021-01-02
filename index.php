@@ -13,7 +13,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>  
+<script src="js/swal.js"></script>  
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body id="fundo_site">
@@ -40,7 +40,8 @@
                     $login = $_POST['login'];
                     $entrar = $_POST['entrar'];
                     $senha = md5($_POST['senha']);
-                    require 'conectar.php';
+                    $connect = mysql_connect('mysql742.umbler.com:41890','cmapper','Mistic.1708')or die("Impossivel conectar");
+                    $db = mysql_select_db('cmapper');;
                       if (isset($entrar)) {
                     
                         $verifica = mysql_query("select * from usuarios WHERE usuario =
