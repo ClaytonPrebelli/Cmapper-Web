@@ -36,7 +36,8 @@
             </form>
             </fieldset>
             <h2 id="resposta">
-               
+            <script language='javascript' type='text/javascript'>
+                        swal('Login e/ou senha incorretos');</script>
     </h2> 
     </div>
     </section>

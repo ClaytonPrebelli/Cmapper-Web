@@ -35,9 +35,9 @@
 </tr>
     <?php
         require('conectar.php');
-        $sql = mysql_query("select usuarios.nome,usuarios.email,permissoes.permission_descricao,usuarios.usuario from usuarios join permissoes on usuarios.permissao=permissoes.idpermission");
+        $sql = mysqli_query($connect,"select usuarios.nome,usuarios.email,permissoes.permission_descricao,usuarios.usuario from usuarios join permissoes on usuarios.permissao=permissoes.idpermission");
         
-        while($acumula=mysql_fetch_array($sql)){
+        while($acumula=mysqli_fetch_array($sql)){
             echo "<td class='corpo'>".$acumula['nome']."</td><td class='corpo'>".$acumula['email']."</td><td class='corpo'>".ucfirst($acumula['permission_descricao'])."</td><td class='corpo'>".$acumula['usuario']."</td class='corpo'></tr> ";
         }
                 ?></table>

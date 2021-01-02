@@ -46,8 +46,8 @@
         $usuario = $_POST['usuario'];
         require 'conectar.php';
         $sql = "select usuarios.nome, usuarios.email, permissoes.permission_descricao, usuarios.usuario from usuarios join permissoes on usuarios.permissao = permissoes.idpermission where usuarios.nome='$nome' or usuarios.email='$email' or usuarios.usuario='$usuario';";
-        $roda=mysql_query($sql);
-             while($res=mysql_fetch_array($roda)){
+        $roda=mysqli_query($connect,$sql);
+             while($res=mysqli_fetch_array($roda)){
                  $vnome=$res['nome'];
                  $vemail=$res['email'];
                  $vpermissao= strtoupper($res['permission_descricao']);
@@ -60,7 +60,7 @@
           $cadastrado = $_GET['cadastrado'];
           $removido=$_GET['removido'];
           if ($cadastrado==true){
-                if (mysql_num_rows($roda)<=0){
+                if (mysqli_num_rows($roda)<=0){
                     echo "<script>swal('Usuário não encontrado')</script>";
 
                     }else{  echo '<script>

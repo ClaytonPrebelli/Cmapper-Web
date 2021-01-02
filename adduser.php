@@ -37,8 +37,8 @@
             <option value="null" class="lista_banco">Selecione...</option>
             <?php
             require 'conectar.php';
-            $query = mysql_query("select idpermission,permission_descricao from permissoes");
-            while($perm = mysql_fetch_array($query)) { ?>
+            $query = mysqli_query($connect,"select idpermission,permission_descricao from permissoes");
+            while($perm = mysqli_fetch_array($query)) { ?>
                 <option value="<?php echo $perm['idpermission']?>" class="lista_banco"><?php echo ucfirst($perm['permission_descricao']) ?></option>
                 <?php } ?>
                
