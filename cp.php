@@ -25,6 +25,7 @@
         <div id="titulo"><h1 id="titulo">Cmapper - Cadastro de Pacientes COVID-19</h1>
         </div><div id="logout"><a href="index.php"><img src="images/logout.png" alt="logout"></a></div><div id="cp"><a href="valida.php"><img src="images/cp.png" alt="CP" id="cp"></a></div></section>
         <div id="conteudo_total" class="conteudo">
+        <h1 id="titulo_cadastrar" class="titulo_usuarios">Módulo de Usuários</h1><hr>
             <div id="conteudo" class="conteudo"> <div id="add_user"><h2>Adicionar Usuário</center></h2><a href="adduser.php"><img src="images/adduser.png" alt="Add User" class="icones_user"></div></a>
     <div id="remove_user"><h2>Deletar Usuário</center></h2><a href="removeuser.php"><img src="images/removeuser.png" alt="Remove User" class="icones_user"></a></div>
     <div id="list_user"><h2>Listar Usuário</center></h2><a href="listuser.php"><img src="images/listuser.png" alt="Listar User" class="icones_user"></a></div>

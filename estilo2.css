@@ -14,6 +14,7 @@ div#add_user{
     margin: 85px 25px 35px 25px;
 }
 div.icone_paci{
+   /* border:solid black;*/
     width: 20%;
     height: 200px;
     padding: 0px;
@@ -21,16 +22,15 @@ div.icone_paci{
     align-content: center   ;
     float: left;
     text-align: center;
-    margin: 40px 25px 0px 25px;
+    margin: 00px 25px 0px 25px;
 }
+
 div#relatorio{
-    width: 20%;
+  /* border:solid black;*/
+  /*  width: 20%;*/
     height: 200px;
-    padding: 0px;
-    vertical-align: middle;
-    align-content: center   ;
-     text-align: center;
-    margin: 20px auto 20px auto;
+    text-align: center;
+    margin: -45px auto auto auto;
 }
 
 div#change_pass{
@@ -78,10 +78,12 @@ div#list_user{
     text-align: center;
     margin: 85px 25px 35px 25px;
 }
-.iconusers{
+.icon_users{
     display: block;
     margin: 2px auto 2px auto;
 }
+
+
 div#add{
     margin: 0px auto 2px auto;
     border:solid;
@@ -117,10 +119,13 @@ div#conteudo_total_paci{
     border: 3px;
     border-color: rgb(1, 1, 77);
     box-shadow: 2px 2px 5px 1px  #00027e93;
-    min-height: 68vh;
+    min-height: 70vh;
     border-radius: 25px;
     padding: 1px;
-    background-color: darkgrey  ; 
+    background-color: darkgrey ; 
+   display:inline-flexbox;
+
+
      
 }
 div#conteudo{
@@ -128,6 +133,7 @@ div#conteudo{
 }
 div#conteudo_interno_paci{
     margin:0px 15px 0px 15px;
+    height: 100%;
 }
 div#rodape2{
     margin: 0px auto 0px auto;
