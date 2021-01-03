@@ -20,10 +20,10 @@
     <section id="header">
     <div id="header">
         <div id="logo">
-           <a href="index2.html"> <img src="images/logo.png" alt="Logo" id="logo"></a>
+           <a href="index2.html"> <img src="images/logo.png" alt="Logo" id="logo" title="Home"></a>
         </div>
         <div id="titulo"><h1 id="titulo">Cmapper - Cadastro de Pacientes COVID-19</h1>
-        </div><div id="logout"><a href="index.php"><img src="images/logout.png" alt="logout"></a></div><div id="cp"><a href="valida.php"><img src="images/cp.png" alt="CP" id="cp"></a></div></section>
+        </div><div id="logout"><a href="index.php"><img src="images/logout.png" alt="logout"></a></div><div id="cp"><a href="valida.php"><img src="images/cp.png" alt="CP" id="cp" title="Painel de Controle"></a></div></section>
         <div id="conteudo_total" class="conteudo">
         <h1 id="titulo_cadastrar" class="titulo_usuarios">Módulo de Usuários</h1><hr>
             <div id="conteudo" class="conteudo"> <div id="add_user"><h2>Adicionar Usuário</center></h2><a href="adduser.php"><img src="images/adduser.png" alt="Add User" class="icones_user"></div></a>
